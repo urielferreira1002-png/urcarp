@@ -7,38 +7,117 @@
 
   <link rel="stylesheet" href="style.css">
   <style>
+    :root {
+      --vip-bg: #000000;
+      --vip-card: #0a0a0a;
+      --vip-line: #d6b87c;
+      --vip-text: #f2ead9;
+      --vip-muted: #b9ad90;
+      --vip-banner: #121212;
+      --vip-gold-flat: #d6b87c;
+      --vip-gold-flat-hover: #c9a966;
+    }
+
     body {
-      background: #000 !important;
+      background: var(--vip-bg) !important;
+      color: var(--vip-text);
     }
 
-    .ranks-container {
-      gap: 22px;
+    .hero {
+      background: #000;
+      border-bottom: 1px solid rgba(214, 184, 124, 0.18);
+      padding: 72px 20px 56px;
     }
 
-    .rank-card {
-      background: #0a0a0a !important;
-      border: 1px solid #242424 !important;
-      border-radius: 14px !important;
-      box-shadow: none !important;
-      animation: slideInUp 0.6s ease-out !important;
-      transform: none !important;
+    .hero h1 {
+      color: var(--vip-line);
+      letter-spacing: 0.08em;
     }
 
-    .rank-card:hover {
-      transform: translateY(-4px) !important;
-      border-color: #3a3a3a !important;
-      box-shadow: none !important;
-      animation: none !important;
+    .hero p {
+      color: var(--vip-muted);
     }
 
-    .rank-card:hover .rank-icon,
-    .rank-card:hover .rank-preco,
-    .rank-card:hover .rank-lema {
-      transform: none !important;
-      animation: none !important;
-      text-shadow: none !important;
-      color: inherit !important;
-      background: inherit !important;
+    .vip-plans {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 42px 20px 72px;
+    }
+
+    .vip-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    .vip-card {
+      background: var(--vip-card);
+      border: 1px solid var(--vip-line);
+      border-radius: 10px;
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      min-height: 560px;
+      box-shadow: none;
+      position: relative;
+    }
+
+    .vip-card-head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+      color: var(--vip-line);
+      font-weight: 700;
+      letter-spacing: 0.06em;
+    }
+
+    .vip-card h2 {
+      font-size: 1.5rem;
+      color: var(--vip-text);
+      margin: 0 0 8px;
+    }
+
+    .vip-preco {
+      font-size: 2.1rem;
+      font-weight: 800;
+      color: var(--vip-line);
+      margin: 0 0 18px;
+    }
+
+    .vip-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      text-align: left;
+    }
+
+    .vip-list li {
+      color: var(--vip-text);
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(214, 184, 124, 0.14);
+      font-size: 0.98rem;
+    }
+
+    .vip-list li:last-child {
+      border-bottom: none;
+    }
+
+    .vip-banner {
+      margin-top: 18px;
+      margin-bottom: 18px;
+      background: var(--vip-banner);
+      border: 1px solid rgba(214, 184, 124, 0.32);
+      border-radius: 8px;
+      padding: 10px 12px;
+      color: var(--vip-line);
+      font-weight: 700;
+      font-size: 0.92rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      align-self: flex-start;
     }
 
     .btn-comprar-rank {
@@ -47,19 +126,20 @@
       align-items: center;
       width: 100%;
       min-height: 50px;
-      padding: 14px 18px !important;
-      border: 1px solid #d6b87c !important;
-      border-radius: 8px !important;
-      background: #d6b87c !important;
-      color: #000 !important;
+      margin-top: auto;
+      padding: 14px 18px;
+      border: 1px solid var(--vip-gold-flat);
+      border-radius: 6px;
+      background: var(--vip-gold-flat);
+      color: #000;
       font-weight: 800;
       font-size: 0.98rem;
       letter-spacing: 0.08em;
       text-decoration: none;
       text-transform: uppercase;
-      box-shadow: none !important;
-      filter: none !important;
-      transition: background-color 0.22s ease, color 0.22s ease, transform 0.22s ease;
+      box-shadow: none;
+      filter: none;
+      transition: background-color 0.22s ease, transform 0.22s ease;
     }
 
     .btn-comprar-rank::before,
@@ -69,10 +149,10 @@
     }
 
     .btn-comprar-rank:hover {
-      background: #c7a763 !important;
-      color: #000 !important;
+      background: var(--vip-gold-flat-hover);
+      color: #000;
       transform: translateY(-1px);
-      box-shadow: none !important;
+      box-shadow: none;
     }
 
     .btn-comprar-rank:active {
@@ -80,8 +160,18 @@
     }
 
     .btn-comprar-rank:focus-visible {
-      outline: 2px solid #d6b87c;
+      outline: 2px solid var(--vip-line);
       outline-offset: 2px;
+    }
+
+    @media (max-width: 980px) {
+      .vip-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .vip-card {
+        min-height: auto;
+      }
     }
   </style>
 </head>
@@ -113,106 +203,95 @@
 
 <section class="hero">
   <h1>PLANOS VIP</h1>
-  <p>Escolha seu rank e desbloqueie benefícios exclusivos</p>
+  <p>Escolha seu plano e desbloqueie benefícios exclusivos no servidor</p>
 </section>
 
-<section class="ranks-container">
+<section class="vip-plans">
+  <div class="vip-grid">
+    <article class="vip-card">
+      <div class="vip-card-head">🥉 <span>Plano Bronze</span></div>
+      <h2>BRONZE</h2>
+      <p class="vip-preco">R$ 19,90</p>
+      <ul class="vip-list">
+        <li>💰 Salário +10%</li>
+        <li>🎒 Mochila +5kg</li>
+        <li>⏱️ Cooldown menor em jobs (-10%)</li>
+        <li>🎯 Prioridade leve na fila</li>
+      </ul>
+      <a href="https://discord.gg/ZgWVdm4H" target="_blank" class="btn-comprar-rank">COMPRAR</a>
+    </article>
 
-  <!-- BRONZE -->
-  <div class="rank-card bronze-rank">
-    <div class="rank-icon">🥉</div>
-    <h2>BRONZE</h2>
-    <div class="rank-preco">R$ 19,90</div>
-    <ul class="rank-beneficios">
-      <li>💰 Salário +10%</li>
-      <li>🎒 Mochila +5kg</li>
-      <li>⏱️ Cooldown menor em jobs (-10%)</li>
-      <li>🎯 Prioridade leve na fila</li>
-    </ul>
-    <p class="rank-lema">🥉 Entrada</p>
-    <a href="https://discord.gg/ZgWVdm4H" target="_blank" class="btn-comprar-rank">COMPRAR</a>
+    <article class="vip-card">
+      <div class="vip-card-head">🥈 <span>Plano Prata</span></div>
+      <h2>PRATA</h2>
+      <p class="vip-preco">R$ 39,90</p>
+      <ul class="vip-list">
+        <li>💰 Salário +20%</li>
+        <li>🎒 Mochila +10kg</li>
+        <li>⚡ Jobs dão mais dinheiro (+15%)</li>
+        <li>🧍 Spawn VIP com local melhor</li>
+      </ul>
+      <p class="vip-banner">🥈 Já começa a ficar interessante</p>
+      <a href="https://discord.gg/ZgWVdm4H" target="_blank" class="btn-comprar-rank">COMPRAR</a>
+    </article>
+
+    <article class="vip-card">
+      <div class="vip-card-head">🥇 <span>Plano Ouro</span></div>
+      <h2>OURO</h2>
+      <p class="vip-preco">R$ 69,90</p>
+      <ul class="vip-list">
+        <li>🚗 1 carro normal</li>
+        <li>💰 Salário +30%</li>
+        <li>🎒 Mochila +20kg</li>
+        <li>⚡ Bônus em missões +25%</li>
+        <li>🏠 Acesso a casas melhores</li>
+      </ul>
+      <p class="vip-banner">🥇 Meta da maioria</p>
+      <a href="https://discord.gg/ZgWVdm4H" target="_blank" class="btn-comprar-rank">COMPRAR</a>
+    </article>
+
+    <article class="vip-card">
+      <div class="vip-card-head">💎 <span>Plano Platina</span></div>
+      <h2>PLATINA</h2>
+      <p class="vip-preco">R$ 99,90</p>
+      <ul class="vip-list">
+        <li>🚗 2 carros normais</li>
+        <li>💰 Salário +40%</li>
+        <li>🎒 Mochila +30kg</li>
+        <li>⚡ Bônus geral +35%</li>
+        <li>🎨 Tag personalizada</li>
+      </ul>
+      <a href="https://discord.gg/ZgWVdm4H" target="_blank" class="btn-comprar-rank">COMPRAR</a>
+    </article>
+
+    <article class="vip-card">
+      <div class="vip-card-head">👑 <span>Plano Embaixador</span></div>
+      <h2>EMBAIXADOR</h2>
+      <p class="vip-preco">R$ 129,90</p>
+      <ul class="vip-list">
+        <li>🚗 2 carros VIP</li>
+        <li>💰 Salário +50%</li>
+        <li>🎒 Mochila +40kg</li>
+        <li>🏠 Casas premium</li>
+        <li>🎁 Recompensas semanais</li>
+      </ul>
+      <a href="https://discord.gg/ZgWVdm4H" target="_blank" class="btn-comprar-rank">COMPRAR</a>
+    </article>
+
+    <article class="vip-card">
+      <div class="vip-card-head">💰 <span>Plano Magnata</span></div>
+      <h2>MAGNATA</h2>
+      <p class="vip-preco">R$ 179,90</p>
+      <ul class="vip-list">
+        <li>🚗 3 carros VIP+</li>
+        <li>💰 Salário +70%</li>
+        <li>🎒 Mochila +50kg</li>
+        <li>🏢 Negócio próprio simples</li>
+        <li>🎁 Bônus diário</li>
+      </ul>
+      <a href="https://discord.gg/ZgWVdm4H" target="_blank" class="btn-comprar-rank">COMPRAR</a>
+    </article>
   </div>
-
-  <!-- PRATA -->
-  <div class="rank-card prata-rank">
-    <div class="rank-icon">🥈</div>
-    <h2>PRATA</h2>
-    <div class="rank-preco">R$ 39,90</div>
-    <ul class="rank-beneficios">
-      <li>💰 Salário +20%</li>
-      <li>🎒 Mochila +10kg</li>
-      <li>⚡ Jobs dão mais dinheiro (+15%)</li>
-      <li>🧍 Spawn VIP (local melhor)</li>
-    </ul>
-    <p class="rank-lema">🥈 Já começa a ficar interessante</p>
-    <a href="https://discord.gg/ZgWVdm4H" target="_blank" class="btn-comprar-rank">COMPRAR</a>
-  </div>
-
-  <!-- OURO -->
-  <div class="rank-card ouro-rank">
-    <div class="rank-icon">🥇</div>
-    <h2>OURO</h2>
-    <div class="rank-preco">R$ 69,90</div>
-    <ul class="rank-beneficios">
-      <li>🚗 1 Carro normal!</li>
-      <li>💰 Salário +30%</li>
-      <li>🎒 Mochila +20kg</li>
-      <li>⚡ Bônus em missões +25%</li>
-      <li>🏠 Acesso a casas melhores</li>
-      <li>🚗 Desconto em veículos (10%)</li>
-    </ul>
-    <p class="rank-lema">🥇 Meta da maioria</p>
-    <a href="https://discord.gg/ZgWVdm4H" target="_blank" class="btn-comprar-rank">COMPRAR</a>
-  </div>
-
-  <!-- PLATINA -->
-  <div class="rank-card platina-rank">
-    <div class="rank-icon">💎</div>
-    <h2>PLATINA</h2>
-    <div class="rank-preco">R$ 99,90</div>
-    <ul class="rank-beneficios">
-      <li>🚗 2 Carros normais!</li>
-      <li>💰 Salário +40%</li>
-      <li>🎒 Mochila +30kg</li>
-      <li>⚡ Bônus geral +35%</li>
-      <li>🎨 Tag personalizada (chat/placa)</li>
-    </ul>
-    <p class="rank-lema">💎 Status + vantagem</p>
-    <a href="https://discord.gg/ZgWVdm4H" target="_blank" class="btn-comprar-rank">COMPRAR</a>
-  </div>
-
-  <!-- EMBAIXADOR -->
-  <div class="rank-card embaixador-rank">
-    <div class="rank-icon">👑</div>
-    <h2>EMBAIXADOR</h2>
-    <div class="rank-preco">R$ 129,90</div>
-    <ul class="rank-beneficios">
-      <li>🚗 2 carros vip!</li>
-      <li>💰 Salário +50%</li>
-      <li>🎒 Mochila +40kg</li>
-      <li>🏠 Casas premium</li>
-      <li>🎁 Recompensas semanais</li>
-    </ul>
-    <p class="rank-lema">👑 Semi elite</p>
-    <a href="https://discord.gg/ZgWVdm4H" target="_blank" class="btn-comprar-rank">COMPRAR</a>
-  </div>
-
-  <!-- MAGNATA -->
-  <div class="rank-card magnata-rank">
-    <div class="rank-icon">💰</div>
-    <h2>MAGNATA</h2>
-    <div class="rank-preco">R$ 179,90</div>
-    <ul class="rank-beneficios">
-      <li>🚗 3 carros vips+ !</li>
-      <li>💰 Salário +70%</li>
-      <li>🎒 Mochila +50kg</li>
-      <li>🏢 Negócios próprios (empresa simples)</li>
-      <li>🎁 Bônus diário</li>
-    </ul>
-    <p class="rank-lema">💰 Rico</p>
-    <a href="https://discord.gg/ZgWVdm4H" target="_blank" class="btn-comprar-rank">COMPRAR</a>
-  </div>
-
 </section>
 
 </body>
