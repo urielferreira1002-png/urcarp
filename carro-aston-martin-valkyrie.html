@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aston Martin Valkyrie | URCA RP</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .carro-detalhe { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+
+    .carro-hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      margin-bottom: 60px;
+    }
+
+    .carro-imagem {
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 0 40px rgba(255, 71, 87, 0.3);
+    }
+
+    .carro-imagem img {
+      width: 100%;
+      border-radius: 15px;
+    }
+
+    .badge-vipplus {
+      background: linear-gradient(135deg, #ff4757, #ff6b7a);
+      color: #fff;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      display: inline-block;
+    }
+
+    .carro-info h1 {
+      color: #ff4757;
+      font-size: 48px;
+    }
+
+    .carro-info-data {
+      color: #888;
+      margin-bottom: 20px;
+    }
+
+    .descricao {
+      color: #bbb;
+      line-height: 1.8;
+      margin: 20px 0;
+    }
+
+    .preco-info {
+      background: linear-gradient(135deg, #ff4757, #ff6b7a);
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .preco-info .valor {
+      font-size: 32px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .especificacoes {
+      background: rgba(255, 71, 87, 0.1);
+      border: 1px solid rgba(255, 71, 87, 0.3);
+      padding: 25px;
+      border-radius: 10px;
+      margin: 30px 0;
+    }
+
+    .especificacoes h3 {
+      color: #ff4757;
+      margin-bottom: 20px;
+    }
+
+    .spec-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .spec-item {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255, 71, 87, 0.2);
+      padding: 10px 0;
+    }
+
+    .spec-label { color: #aaa; }
+    .spec-valor { color: #fff; font-weight: 600; }
+
+    .botoes {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .btn {
+      padding: 15px;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .btn-comprar {
+      background: linear-gradient(135deg, #ff4757, #ff6b7a);
+      color: #fff;
+    }
+
+    .btn-voltar {
+      background: rgba(255, 71, 87, 0.2);
+      color: #fff;
+      border: 1px solid rgba(255, 71, 87, 0.5);
+    }
+
+    @media (max-width: 768px) {
+      .carro-hero { grid-template-columns: 1fr; }
+      .spec-grid { grid-template-columns: 1fr; }
+      .botoes { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="header-urca">
+  <div class="header-content">
+    <h1>🎮 URCA RP</h1>
+  </div>
+</header>
+
+<section class="carro-detalhe">
+  <div class="carro-hero">
+
+    <div class="carro-imagem">
+      <img src="/imagens/Aston Martin Valkyrie.webp" alt="Aston Martin Valkyrie">
+    </div>
+
+    <div class="carro-info">
+
+      <div class="badge-vipplus">👑 PACOTE VIP+</div>
+
+      <h1>Aston Martin Valkyrie</h1>
+
+      <p class="carro-info-data">Hypercar inspirado na Fórmula 1 com desempenho extremo</p>
+
+      <p class="descricao">
+        O Aston Martin Valkyrie é um dos carros mais radicais já criados, desenvolvido com tecnologia direta da Fórmula 1. Equipado com um motor V12 aspirado combinado com sistema híbrido, ele entrega mais de 1100 cavalos de potência. Seu design aerodinâmico extremo e peso reduzido fazem dele uma máquina focada em performance pura, oferecendo uma experiência de direção próxima de um carro de corrida profissional.
+      </p>
+
+      <div class="preco-info">
+        <div>Preço VIP+</div>
+        <div class="valor">R$ 150</div>
+      </div>
+
+      <div class="especificacoes">
+        <h3>📊 Especificações</h3>
+
+        <div class="spec-grid">
+          <div class="spec-item"><span class="spec-label">Velocidade Máxima</span><span class="spec-valor">400+ km/h</span></div>
+          <div class="spec-item"><span class="spec-label">Aceleração</span><span class="spec-valor">2.5 seg</span></div>
+          <div class="spec-item"><span class="spec-label">Torque</span><span class="spec-valor">900 Nm</span></div>
+          <div class="spec-item"><span class="spec-label">Potência</span><span class="spec-valor">1160 HP</span></div>
+          <div class="spec-item"><span class="spec-label">Tipo</span><span class="spec-valor">Hypercar VIP+</span></div>
+          <div class="spec-item"><span class="spec-label">Acesso</span><span class="spec-valor">Exclusivo VIP+</span></div>
+        </div>
+      </div>
+
+      <div class="botoes">
+        <a href="#" class="btn btn-comprar">🛒 COMPRAR AGORA</a>
+        <button class="btn btn-voltar" onclick="window.location.href='loja.html'">← VOLTAR LOJA</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

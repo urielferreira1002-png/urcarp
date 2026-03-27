@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ferrari 488 GTB | URCA RP</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .carro-detalhe { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+    .carro-hero { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; margin-bottom: 60px; }
+    .carro-imagem { position: relative; overflow: hidden; border-radius: 15px; box-shadow: 0 0 40px rgba(255, 71, 87, 0.3); }
+    .carro-imagem img { width: 100%; height: auto; display: block; border-radius: 15px; }
+    .badge-vipplus { display: inline-block; background: linear-gradient(135deg, #ff4757, #ff6b7a); color: #fff; padding: 8px 20px; border-radius: 20px; font-size: 12px; font-weight: 700; margin-bottom: 20px; }
+    .carro-info h1 { color: #ff4757; font-size: 48px; margin-bottom: 10px; }
+    .carro-info-data { color: #888; margin-bottom: 30px; }
+    .descricao { color: #bbb; line-height: 1.8; margin: 20px 0; font-size: 15px; }
+    .preco-info { background: linear-gradient(135deg, #ff4757, #ff6b7a); border-radius: 10px; padding: 20px; margin: 30px 0; text-align: center; }
+    .preco-info .valor { color: #fff; font-size: 32px; font-weight: 700; margin: 10px 0; }
+    .especificacoes { background: rgba(255, 71, 87, 0.1); border: 1px solid rgba(255, 71, 87, 0.3); border-radius: 10px; padding: 25px; margin: 30px 0; }
+    .especificacoes h3 { color: #ff4757; margin-bottom: 20px; text-transform: uppercase; font-size: 14px; letter-spacing: 1px; }
+    .spec-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .spec-item { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(255, 71, 87, 0.2); }
+    .spec-label { color: #aaa; font-size: 14px; }
+    .spec-valor { color: #fff; font-weight: 600; }
+    .botoes { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 30px; }
+    .btn { padding: 15px 30px; border: none; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 1px; }
+    .btn-comprar { background: linear-gradient(135deg, #ff4757, #ff6b7a); color: #fff; box-shadow: 0 10px 30px rgba(255, 71, 87, 0.3); }
+    .btn-comprar:hover { transform: translateY(-2px); box-shadow: 0 15px 40px rgba(255, 71, 87, 0.4); }
+    .btn-voltar { background: rgba(255, 71, 87, 0.2); color: #fff; border: 1px solid rgba(255, 71, 87, 0.5); }
+    .btn-voltar:hover { background: rgba(255, 71, 87, 0.3); }
+    @media (max-width: 768px) {
+      .carro-hero { grid-template-columns: 1fr; gap: 30px; }
+      .carro-info h1 { font-size: 32px; }
+      .botoes { grid-template-columns: 1fr; }
+      .spec-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header-urca">
+    <div class="header-content">
+      <h1>🎮 URCA RP</h1>
+      <div class="header-actions">
+        <button class="hamburger-btn" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="headerMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="header-menu" id="headerMenu">
+          <div class="header-menu-title">NAVEGAÇÃO</div>
+          <a href="index.html">🏠 Início</a>
+          <a href="loja.html" class="active">🚗 Loja</a>
+          <a href="vip.html">💎 VIP</a>
+          <a href="conta.html">👤 Conta</a>
+          <hr>
+          <a href="https://discord.gg" target="_blank">💬 Discord</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="carro-detalhe">
+    <div class="carro-hero">
+      <div class="carro-imagem">
+        <img src="/imagens/McLaren 720S.jpg" alt="McLaren 720S" onerror="this.src='https://via.placeholder.com/400x300/1a1a1a/ff4757?text=Ferrari+488'">
+      </div>
+      <div class="carro-info">
+        <div class="carro-info">
+  <div class="badge-vipplus">👑 PACOTE VIP+</div>
+
+  <h1>McLaren 720S</h1>
+
+  <p class="carro-info-data">Supercarro britânico de engenharia extrema</p>
+
+  <p class="descricao">
+    A McLaren 720S representa o auge da engenharia automotiva britânica, combinando leveza, potência e aerodinâmica avançada. Seu motor V8 biturbo entrega 720 cavalos de potência, proporcionando uma aceleração brutal de 0 a 100 km/h em apenas 2.9 segundos. Construída com fibra de carbono e tecnologia derivada da Fórmula 1, ela oferece uma experiência de direção extremamente precisa e agressiva, sendo uma das máquinas mais respeitadas no mundo dos supercarros.
+  </p>
+
+  <div class="preco-info">
+    <div>Preço VIP+</div>
+    <div class="valor">R$ 150</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.7);">
+      In-game currency (Membros VIP+)
+    </div>
+  </div>
+
+  <div class="especificacoes">
+    <h3>📊 Especificações</h3>
+
+    <div class="spec-grid">
+      <div class="spec-item">
+        <span class="spec-label">Velocidade Máxima</span>
+        <span class="spec-valor">341 km/h</span>
+      </div>
+
+      <div class="spec-item">
+        <span class="spec-label">Aceleração (0-100)</span>
+        <span class="spec-valor">2.9 seg</span>
+      </div>
+
+      <div class="spec-item">
+        <span class="spec-label">Torque</span>
+        <span class="spec-valor">770 Nm</span>
+      </div>
+
+      <div class="spec-item">
+        <span class="spec-label">Potência</span>
+        <span class="spec-valor">720 HP</span>
+      </div>
+
+      <div class="spec-item">
+        <span class="spec-label">Tipo</span>
+        <span class="spec-valor">Hypercar VIP+</span>
+      </div>
+
+      <div class="spec-item">
+        <span class="spec-label">Acesso</span>
+        <span class="spec-valor">Exclusivo VIP+</span>
+      </div>
+    </div>
+  </div>
+
+        <div class="botoes">
+          <a href="https://discord.gg/ZgWVdm4H" target="_blank" class="btn btn-comprar">🛒 COMPRAR AGORA</a>
+          <button class="btn btn-voltar" onclick="window.location.href='loja.html'">← VOLTAR LOJA</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+  <script src="menu-script.js"></script>
+</body>
+</html>

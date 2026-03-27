@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu URCA RP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- MENU LATERAL -->
+  <nav class="menu-lateral">
+    <div class="menu-header">
+      <h2>URCA RP</h2>
+      <button class="close-menu" onclick="toggleMenu()">✕</button>
+    </div>
+
+    <!-- PRINCIPAL -->
+    <div class="menu-section">
+      <h3 class="menu-title">⭐ PRINCIPAL</h3>
+      <ul class="menu-list">
+        <li><a href="#destaques" onclick="navigate('destaques')">Destaques</a></li>
+        <li><a href="#lancamentos" onclick="navigate('lancamentos')">Lançamentos</a></li>
+      </ul>
+    </div>
+
+    <!-- VEÍCULOS -->
+    <div class="menu-section">
+      <h3 class="menu-title">🚗 VEÍCULOS</h3>
+      <ul class="menu-list">
+        <li><a href="#normais" onclick="navigate('normais')">Normais</a></li>
+        <li><a href="#esportivos" onclick="navigate('esportivos')">Esportivos</a></li>
+        <li><a href="#hyper" onclick="navigate('hyper')">Hyper</a></li>
+        <li><a href="#blindados" onclick="navigate('blindados')">Blindados</a></li>
+      </ul>
+    </div>
+
+    <!-- VIP -->
+    <div class="menu-section">
+      <h3 class="menu-title">💎 VIP</h3>
+      <ul class="menu-list">
+        <li><a href="#vip" onclick="navigate('vip')">VIP</a></li>
+        <li><a href="#vipplus" onclick="navigate('vipplus')">VIP+</a></li>
+      </ul>
+    </div>
+
+    <!-- OUTROS -->
+    <div class="menu-section">
+      <h3 class="menu-title">🏠 OUTROS</h3>
+      <ul class="menu-list">
+        <li><a href="#casas" onclick="navigate('casas')">Casas</a></li>
+        <li><a href="#aeronaves" onclick="navigate('aeronaves')">Aeronaves</a></li>
+        <li><a href="#extras" onclick="navigate('extras')">Extras</a></li>
+      </ul>
+    </div>
+
+    <!-- SISTEMA -->
+    <div class="menu-section">
+      <h3 class="menu-title">💰 SISTEMA</h3>
+      <ul class="menu-list">
+        <li><a href="#money" onclick="navigate('money')">Money</a></li>
+        <li><a href="#faccao" onclick="navigate('faccao')">Facção</a></li>
+      </ul>
+    </div>
+
+  </nav>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="main-content">
+    <section id="destaques" class="content-section" style="display:none;">
+      <h1>⭐ DESTAQUES</h1>
+      <p class="section-desc">🔥 Vitrine com os itens mais vendidos e em alta no servidor</p>
+      
+      <div class="highlight-grid">
+        <div class="highlight-card">
+          <div class="highlight-icon">🔥</div>
+          <h3>Carros Mais Vendidos</h3>
+          <p>Os modelos favoritos da comunidade</p>
+          <div class="highlight-items">
+            <span class="item-tag">🏎️ Audi RS7</span>
+            <span class="item-tag">🚗 GMC Sierra</span>
+            <span class="item-tag">⚡ Toyota Supra</span>
+          </div>
+        </div>
+
+        <div class="highlight-card">
+          <div class="highlight-icon">💎</div>
+          <h3>VIP Mais Comprado</h3>
+          <p>O plano VIP mais popular</p>
+          <div class="highlight-content">
+            <span class="vip-badge">OURO</span>
+            <p class="vip-info">👑 Acesso exclusivo + 🚗 Carros VIP + 💰 Salário R$50.000</p>
+            <p class="vip-price">R$ 69,90</p>
+          </div>
+        </div>
+
+        <div class="highlight-card">
+          <div class="highlight-icon">⭐</div>
+          <h3>Promoções Ativas</h3>
+          <p>Aproveite descontos especiais</p>
+          <div class="promo-list">
+            <span class="promo-item">🎉 -15% em Esportivos</span>
+            <span class="promo-item">🎁 VIP: Compre 1 leve 2</span>
+            <span class="promo-item">⏰ Válido até 31/03</span>
+          </div>
+        </div>
+
+        <div class="highlight-card">
+          <div class="highlight-icon">🚀</div>
+          <h3>Itens em Alta</h3>
+          <p>Tendência do momento</p>
+          <div class="trending-list">
+            <span class="trend-item">📈 +45% Bugatti Chiron</span>
+            <span class="trend-item">📈 +38% Plano Magnata</span>
+            <span class="trend-item">📈 +52% Placa Customizada</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="lancamentos" class="content-section" style="display:none;">
+      <h1>🚀 LANÇAMENTOS</h1>
+      <p class="section-desc">📢 Novidades quentes - sempre atualizado para não ficar feio</p>
+      
+      <div class="launch-grid">
+        <div class="launch-card new-badge">
+          <div class="launch-header">Novo</div>
+          <h3>🚗 Carros Novos</h3>
+          <p>Última atualização: 20/03/2026</p>
+          <div class="launch-models">
+            <span class="model-tag">Aston Martin Valkyrie</span>
+            <span class="model-tag">Rimac Nevera</span>
+            <span class="model-tag">Hennessey Venom F5</span>
+          </div>
+          <button class="btn-check">Conferir</button>
+        </div>
+
+        <div class="launch-card new-badge">
+          <div class="launch-header">Novo</div>
+          <h3>💎 VIP Novo</h3>
+          <p>Plano recém-lançado</p>
+          <div class="vip-new-info">
+            <span class="vip-tag">CHEFÃO</span>
+            <p class="vip-desc">👑 Super Exclusivo + 🚗 10 Carros + 🏢 Empresa Garantida</p>
+            <p class="vip-new-price">R$ 249,90</p>
+          </div>
+          <button class="btn-check">Comprar</button>
+        </div>
+
+        <div class="launch-card">
+          <h3>⚙️ Atualização Recente</h3>
+          <p>Patch 2.5.1 - 18/03/2026</p>
+          <div class="update-list">
+            <span class="update-item">✅ Novos blindados adicionados</span>
+            <span class="update-item">✅ Sistema de placas melhorado</span>
+            <span class="update-item">✅ Balanceamento de preços</span>
+            <span class="update-item">✅ 5 novos efeitos visuais</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="normais" class="content-section" style="display:none;">
+      <h1>� CARROS NORMAIS</h1>
+      <p class="section-desc">Veículos básicos, preço acessível - perfeito para começar no servidor</p>
+      
+      <div class="car-grid">
+        <div class="car-card">
+          <div class="car-icon">🚗</div>
+          <h3>Audi A6</h3>
+          <p class="car-type">Sedan Executivo</p>
+          <p class="car-desc">Elegância e conforto</p>
+          <p class="car-price">R$ 20,00</p>
+          <button class="btn-buy">Comprar</button>
+        </div>
+        <div class="car-card">
+          <div class="car-icon">🏎️</div>
+          <h3>GMC Sierra</h3>
+          <p class="car-type">Pickup 4x4</p>
+          <p class="car-desc">Robusta e confiável</p>
+          <p class="car-price">R$ 20,00</p>
+          <button class="btn-buy">Comprar</button>
+        </div>
+        <div class="car-card">
+          <div class="car-icon">🚙</div>
+          <h3>Toyota Hilux</h3>
+          <p class="car-type">Pickup Utilitária</p>
+          <p class="car-desc">Popular entre trabalhadores</p>
+          <p class="car-price">R$ 20,00</p>
+          <button class="btn-buy">Comprar</button>
+        </div>
+        <div class="car-card">
+          <div class="car-icon">🚗</div>
+          <h3>Ford Raptor</h3>
+          <p class="car-type">Pickup Performance</p>
+          <p class="car-desc">Potência e estilo</p>
+          <p class="car-price">R$ 20,00</p>
+          <button class="btn-buy">Comprar</button>
+        </div>
+        <div class="car-card">
+          <div class="car-icon">🚕</div>
+          <h3>Dodge Ram</h3>
+          <p class="car-type">Pickup Americana</p>
+          <p class="car-desc">Clássica e confortável</p>
+          <p class="car-price">R$ 20,00</p>
+          <button class="btn-buy">Comprar</button>
+        </div>
+        <div class="car-card">
+          <div class="car-icon">🚐</div>
+          <h3>Nissan Armada</h3>
+          <p class="car-type">SUV Luxo</p>
+          <p class="car-desc">Espaçosa e moderna</p>
+          <p class="car-price">R$ 20,00</p>
+          <button class="btn-buy">Comprar</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="esportivos" class="content-section" style="display:none;">
+      <h1>🟡 CARROS ESPORTIVOS</h1>
+      <p class="section-desc">Carros rápidos e ágeis - para quem quer adrenalina nas ruas</p>
+      
+      <div class="car-grid">
+        <div class="car-card sport">
+          <div class="car-icon">🏁</div>
+          <h3>Audi RS7</h3>
+          <p class="car-type">Sedan Performance</p>
+          <p class="car-desc">Sedã mais rápido da Audi</p>
+          <p class="car-price">R$ 50,00</p>
+          <button class="btn-buy">Comprar</button>
+        </div>
+        <div class="car-card sport">
+          <div class="car-icon">⚡</div>
+          <h3>Toyota Supra</h3>
+          <p class="car-type">Coupé Lendário</p>
+          <p class="car-desc">Clássico dos videogames</p>
+          <p class="car-price">R$ 50,00</p>
+          <button class="btn-buy">Comprar</button>
+        </div>
+        <div class="car-card sport">
+          <div class="car-icon">🏎️</div>
+          <h3>Corvette ZR1</h3>
+          <p class="car-type">Superesportivo</p>
+          <p class="car-desc">Potência americana pura</p>
+          <p class="car-price">R$ 50,00</p>
+          <button class="btn-buy">Comprar</button>
+        </div>
+        <div class="car-card sport">
+          <div class="car-icon">💨</div>
+          <h3>Camaro ZL1</h3>
+          <p class="car-type">Muscle Car</p>
+          <p class="car-desc">Agressivo e rápido</p>
+          <p class="car-price">R$ 50,00</p>
+          <button class="btn-buy">Comprar</button>
+        </div>
+        <div class="car-card sport">
+          <div class="car-icon">🚀</div>
+          <h3>Mustang GT500</h3>
+          <p class="car-type">Muscle Car Premium</p>
+          <p class="car-desc">800+ cavalos de potência</p>
+          <p class="car-price">R$ 50,00</p>
+          <button class="btn-buy">Comprar</button>
+        </div>
+        <div class="car-card sport">
+          <div class="car-icon">🔥</div>
+          <h3>Lamborghini Huracan</h3>
+          <p class="car-type">Superesportivo Italiano</p>
+          <p class="car-desc">Pura velocidade italiana</p>
+          <p class="car-price">R$ 50,00</p>
+          <button class="btn-buy">Comprar</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="hyper" class="content-section" style="display:none;">
+      <h1>🔴 CARROS HYPER</h1>
+      <p class="section-desc">Bugatti, Ferrari, McLaren - carros absurdos para verdadeiros milionários</p>
+      
+      <div class="car-grid hyper-grid">
+        <div class="car-card hyper">
+          <div class="car-icon hyper-icon">👑</div>
+          <h3>Bugatti Chiron</h3>
+          <p class="car-type">Hypercar Luxo</p>
+          <p class="car-desc">8.0L W16 quadturbo - 1500+ cv</p>
+          <p class="car-price hyper-price">R$ 150,00 ou VIP+</p>
+          <button class="btn-buy hyper-btn">Comprar</button>
+        </div>
+        <div class="car-card hyper">
+          <div class="car-icon hyper-icon">🏆</div>
+          <h3>Ferrari 488 GTB</h3>
+          <p class="car-type">Superesportivo Lendário</p>
+          <p class="car-desc">V12 naturalmente aspirado - 661 cv</p>
+          <p class="car-price hyper-price">R$ 150,00 ou VIP+</p>
+          <button class="btn-buy hyper-btn">Comprar</button>
+        </div>
+        <div class="car-card hyper">
+          <div class="car-icon hyper-icon">⚡</div>
+          <h3>McLaren 720S</h3>
+          <p class="car-type">Superesportivo Britânico</p>
+          <p class="car-desc">Twin-turbo V8 - 710 cv</p>
+          <p class="car-price hyper-price">R$ 150,00 ou VIP+</p>
+          <button class="btn-buy hyper-btn">Comprar</button>
+        </div>
+        <div class="car-card hyper">
+          <div class="car-icon hyper-icon">🔥</div>
+          <h3>Porsche 911 GT3</h3>
+          <p class="car-type">Superesportivo Alemão</p>
+          <p class="car-desc">Flat-six 4.0L aspirado - 520 cv</p>
+          <p class="car-price hyper-price">R$ 150,00 ou VIP+</p>
+          <button class="btn-buy hyper-btn">Comprar</button>
+        </div>
+        <div class="car-card hyper">
+          <div class="car-icon hyper-icon">💎</div>
+          <h3>Lamborghini Aventador</h3>
+          <p class="car-type">Ícone Italiano</p>
+          <p class="car-desc">V12 quad-turbo - 769 cv</p>
+          <p class="car-price hyper-price">R$ 150,00 ou VIP+</p>
+          <button class="btn-buy hyper-btn">Comprar</button>
+        </div>
+        <div class="car-card hyper">
+          <div class="car-icon hyper-icon">🌟</div>
+          <h3>Koenigsegg Jesko</h3>
+          <p class="car-type">Hypercar Sueco</p>
+          <p class="car-desc">Twin-turbo V8 - 1280 cv</p>
+          <p class="car-price hyper-price">R$ 150,00 ou VIP+</p>
+          <button class="btn-buy hyper-btn">Comprar</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="blindados" class="content-section" style="display:none;">
+      <h1>🛡️ CARROS BLINDADOS</h1>
+      <p class="section-desc">Carros resistentes - essenciais para RP de polícia e facção</p>
+      
+      <div class="car-grid">
+        <div class="car-card armored">
+          <div class="car-icon">🛡️</div>
+          <h3>Kuruma Blindada</h3>
+          <p class="car-type">Militar Leve</p>
+          <p class="car-desc">Proteção contra tiros - Nível 1</p>
+          <p class="car-price">R$ 50,00</p>
+          <button class="btn-buy">Comprar</button>
+        </div>
+        <div class="car-card armored">
+          <div class="car-icon">🚓</div>
+          <h3>Police Interceptor</h3>
+          <p class="car-type">Polícia Blindada</p>
+          <p class="car-desc">Viatura blindada - Padrão PMRP</p>
+          <p class="car-price">R$ 75,00</p>
+          <button class="btn-buy">Comprar</button>
+        </div>
+        <div class="car-card armored">
+          <div class="car-icon">💂</div>
+          <h3>Patriot Militar</h3>
+          <p class="car-type">Transporte Blindado</p>
+          <p class="car-desc">Proteção máxima - Nível 3</p>
+          <p class="car-price">R$ 100,00</p>
+          <button class="btn-buy">Comprar</button>
+        </div>
+        <div class="car-card armored">
+          <div class="car-icon">🔫</div>
+          <h3>Armored Cognoscenti</h3>
+          <p class="car-type">Executivo Blindado</p>
+          <p class="car-desc">Luxo + proteção - Facções</p>
+          <p class="car-price">R$ 120,00</p>
+          <button class="btn-buy">Comprar</button>
+        </div>
+        <div class="car-card armored">
+          <div class="car-icon">🚨</div>
+          <h3>SWAT Truck</h3>
+          <p class="car-type">Operações Especiais</p>
+          <p class="car-desc">Máxima proteção para élite</p>
+          <p class="car-price">R$ 150,00 ou VIP+</p>
+          <button class="btn-buy">Comprar</button>
+        </div>
+        <div class="car-card armored">
+          <div class="car-icon">⚔️</div>
+          <h3>Tanque Blindado</h3>
+          <p class="car-type">Proteção Extrema</p>
+          <p class="car-desc">Praticamente indestrutível</p>
+          <p class="car-price">R$ 150,00 ou VIP+</p>
+          <button class="btn-buy">Comprar</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="vip" class="content-section" style="display:none;">
+      <h1>💎 PACOTE VIP</h1>
+      <p class="section-desc">Planos básicos com benefícios exclusivos - acesso às melhores features</p>
+      
+      <div class="vip-display-grid">
+        <div class="vip-display-card">
+          <div class="vip-rank-badge bronze-badge">BRONZE</div>
+          <h3>💛 Começo VIP</h3>
+          <ul class="vip-features">
+            <li>🚗 2 carros VIP exclusivos</li>
+            <li>🎒 Mochila +50 slots</li>
+            <li>💵 Salário +R$15.000</li>
+            <li>🏠 Casa padrão</li>
+          </ul>
+          <p class="vip-display-price">R$ 19,90</p>
+          <button class="btn-vip-buy">Comprar VIP</button>
+        </div>
+
+        <div class="vip-display-card">
+          <div class="vip-rank-badge prata-badge">PRATA</div>
+          <h3>🤍 VIP Clássico</h3>
+          <ul class="vip-features">
+            <li>🚗 4 carros VIP</li>
+            <li>🎒 Mochila +100 slots</li>
+            <li>💵 Salário +R$25.000</li>
+            <li>🏠 Casa melhorada</li>
+          </ul>
+          <p class="vip-display-price">R$ 39,90</p>
+          <button class="btn-vip-buy">Comprar VIP</button>
+        </div>
+
+        <div class="vip-display-card">
+          <div class="vip-rank-badge ouro-badge">OURO</div>
+          <h3>✨ VIP Premium</h3>
+          <ul class="vip-features">
+            <li>🚗 6 carros VIP + 1 Hypercar</li>
+            <li>🎒 Mochila +150 slots</li>
+            <li>💵 Salário +R$50.000</li>
+            <li>🏢 Empresa com lucro</li>
+          </ul>
+          <p class="vip-display-price">R$ 69,90</p>
+          <button class="btn-vip-buy">Comprar VIP</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="vipplus" class="content-section" style="display:none;">
+      <h1>👑 PACOTE VIP+</h1>
+      <p class="section-desc">Planos avançados com benefícios exclusivos - o topo do servidor</p>
+      
+      <div class="vip-display-grid premium">
+        <div class="vip-display-card premium-card">
+          <div class="vip-rank-badge platina-badge">PLATINA</div>
+          <h3>💜 VIP Elite</h3>
+          <ul class="vip-features">
+            <li>🚗 8 carros VIP + 2 Hypercars</li>
+            <li>🎒 Mochila +200 slots</li>
+            <li>💵 Salário +R$75.000</li>
+            <li>🏢 Empresa Premium</li>
+          </ul>
+          <p class="vip-display-price">R$ 99,90</p>
+          <button class="btn-vip-buy premium-btn">Comprar VIP+</button>
+        </div>
+
+        <div class="vip-display-card premium-card">
+          <div class="vip-rank-badge embaixador-badge">EMBAIXADOR</div>
+          <h3>⭐ VIP Master</h3>
+          <ul class="vip-features">
+            <li>🚗 10 carros VIP + 3 Hypercars</li>
+            <li>🎒 Mochila infinita</li>
+            <li>💵 Salário +R$100.000</li>
+            <li>🏢 Empresa Master + Secundária</li>
+          </ul>
+          <p class="vip-display-price">R$ 129,90</p>
+          <button class="btn-vip-buy premium-btn">Comprar VIP+</button>
+        </div>
+
+        <div class="vip-display-card premium-card">
+          <div class="vip-rank-badge magnata-badge">MAGNATA</div>
+          <h3>🔴 VIP Supremo</h3>
+          <ul class="vip-features">
+            <li>🚗 12 carros VIP + 4 Hypercars</li>
+            <li>🎒 Mochila sem limite</li>
+            <li>💵 Salário +R$150.000</li>
+            <li>🏢 Múltiplas empresas + Cassino</li>
+          </ul>
+          <p class="vip-display-price">R$ 179,90</p>
+          <button class="btn-vip-buy premium-btn">Comprar VIP+</button>
+        </div>
+
+        <div class="vip-display-card premium-card">
+          <div class="vip-rank-badge chefao-badge">CHEFÃO</div>
+          <h3>👑 VIP Lendário</h3>
+          <ul class="vip-features">
+            <li>🚗 15+ carros exclusivos + Hypercars ilimitados</li>
+            <li>🎒 Armazém pessoal</li>
+            <li>💵 Salário +R$200.000 + bônus</li>
+            <li>🏢 Império corporativo completo</li>
+          </ul>
+          <p class="vip-display-price">R$ 249,90</p>
+          <button class="btn-vip-buy premium-btn">Comprar VIP+</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="casas" class="content-section" style="display:none;">
+      <h1>🏠 CASAS</h1>
+      <p class="section-desc">Imóveis variados - do modesto ao luxuoso - com localização diversa</p>
+      
+      <div class="property-grid">
+        <div class="property-card">
+          <div class="property-type">Simples</div>
+          <h3>🏘️ Casa Inicial</h3>
+          <p class="property-location">📍 Favela/Periferia</p>
+          <ul class="property-features">
+            <li>🚪 2 cômodos</li>
+            <li>🛏️ Garagem: 1 carro</li>
+            <li>💾 Armazenamento: 100 itens</li>
+          </ul>
+          <p class="property-price">R$ 50.000</p>
+          <button class="btn-property">Comprar Casa</button>
+        </div>
+
+        <div class="property-card">
+          <div class="property-type">Média</div>
+          <h3>🏡 Casa Residencial</h3>
+          <p class="property-location">📍 Centro da Cidade</p>
+          <ul class="property-features">
+            <li>🚪 4 cômodos</li>
+            <li>🛏️ Garagem: 2 carros</li>
+            <li>💾 Armazenamento: 250 itens</li>
+          </ul>
+          <p class="property-price">R$ 150.000</p>
+          <button class="btn-property">Comprar Casa</button>
+        </div>
+
+        <div class="property-card">
+          <div class="property-type">Luxo</div>
+          <h3>🏰 Mansão Executiva</h3>
+          <p class="property-location">📍 Bairro Premium</p>
+          <ul class="property-features">
+            <li>🚪 8 cômodos</li>
+            <li>🛏️ Garagem: 4 carros</li>
+            <li>💾 Armazenamento: 500 itens</li>
+          </ul>
+          <p class="property-price">R$ 500.000</p>
+          <button class="btn-property">Comprar Casa</button>
+        </div>
+
+        <div class="property-card">
+          <div class="property-type">Extremo</div>
+          <h3>🏛️ Penthouses</h3>
+          <p class="property-location">📍 Arranha-céu Downtown</p>
+          <ul class="property-features">
+            <li>🚪 Elite total</li>
+            <li>🛏️ Garagem: 10 carros</li>
+            <li>💾 Armazenamento: 1000 itens</li>
+          </ul>
+          <p class="property-price">R$ 1.500.000</p>
+          <button class="btn-property">Comprar Casa</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="aeronaves" class="content-section" style="display:none;">
+      <h1>✈️ AERONAVES</h1>
+      <p class="section-desc">Helicópteros e aviões - acesso restrito a VIPs e jogadores de elite</p>
+      
+      <div class="aircraft-grid">
+        <div class="aircraft-card">
+          <div class="aircraft-icon">🚁</div>
+          <h3>Frogger Helicóptero</h3>
+          <p class="aircraft-type">Helicóptero Leve</p>
+          <p class="aircraft-desc">Perfeito para viajantes rápidos</p>
+          <ul class="aircraft-specs">
+            <li>✈️ Velocidade: Média</li>
+            <li>👥 Capacidade: 2 pessoas</li>
+            <li>⏱️ Autonomia: 30 minutos</li>
+          </ul>
+          <p class="aircraft-price">R$ 500.000 ou VIP</p>
+          <button class="btn-aircraft">Adquirir</button>
+        </div>
+
+        <div class="aircraft-card">
+          <div class="aircraft-icon">🛩️</div>
+          <h3>Seabreeze Avião</h3>
+          <p class="aircraft-type">Avião Turismo</p>
+          <p class="aircraft-desc">Viagem com melhor vista</p>
+          <ul class="aircraft-specs">
+            <li>✈️ Velocidade: Alta</li>
+            <li>👥 Capacidade: 4 pessoas</li>
+            <li>⏱️ Autonomia: 1 hora</li>
+          </ul>
+          <p class="aircraft-price">R$ 800.000 ou VIP+</p>
+          <button class="btn-aircraft">Adquirir</button>
+        </div>
+
+        <div class="aircraft-card">
+          <div class="aircraft-icon">🚁</div>
+          <h3>Maverick Grande</h3>
+          <p class="aircraft-type">Helicóptero Executivo</p>
+          <p class="aircraft-desc">Para membros de elite</p>
+          <ul class="aircraft-specs">
+            <li>✈️ Velocidade: Muito Alta</li>
+            <li>👥 Capacidade: 4 pessoas</li>
+            <li>⏱️ Autonomia: 45 minutos</li>
+          </ul>
+          <p class="aircraft-price">R$ 1.200.000 ou Magnata+</p>
+          <button class="btn-aircraft">Adquirir</button>
+        </div>
+
+        <div class="aircraft-card">
+          <div class="aircraft-icon">🛩️</div>
+          <h3>Luxor Jato</h3>
+          <p class="aircraft-type">Jato Privado</p>
+          <p class="aircraft-desc">O auge do luxo aéreo</p>
+          <ul class="aircraft-specs">
+            <li>✈️ Velocidade: Velocidade máxima</li>
+            <li>👥 Capacidade: 4 passageiros</li>
+            <li>⏱️ Autonomia: 2 horas</li>
+          </ul>
+          <p class="aircraft-price">R$ 2.000.000 ou Chefão</p>
+          <button class="btn-aircraft">Adquirir</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="extras" class="content-section" style="display:none;">
+      <h1>🎁 EXTRAS & CUSTOMIZAÇÃO</h1>
+      <p class="section-desc">👉 Isso dá MUITO dinheiro - placas, nomes coloridos, efeitos visuais</p>
+      
+      <div class="extras-grid">
+        <div class="extras-card">
+          <div class="extras-icon">🏷️</div>
+          <h3>Placas Personalizadas</h3>
+          <p class="extras-desc">Customize suas placas de carro</p>
+          <div class="extras-options">
+            <span class="option-tag">Placa Dourada</span>
+            <span class="option-tag">Placa VIP</span>
+            <span class="option-tag">Placa Corporativa</span>
+            <span class="option-tag">Placa Premium</span>
+          </div>
+          <p class="extras-price">R$ 5.000 - R$ 50.000</p>
+          <button class="btn-extras">Customizar Placa</button>
+        </div>
+
+        <div class="extras-card">
+          <div class="extras-icon">🎨</div>
+          <h3>Nomes Coloridos</h3>
+          <p class="extras-desc">Nome com cores e efeitos especiais</p>
+          <div class="extras-options">
+            <span class="option-tag">Azul Cibernético</span>
+            <span class="option-tag">Rosa Néon</span>
+            <span class="option-tag">Gradiente Ouro</span>
+            <span class="option-tag">Holográfico</span>
+          </div>
+          <p class="extras-price">R$ 10.000 - R$ 100.000</p>
+          <button class="btn-extras">Colorir Nome</button>
+        </div>
+
+        <div class="extras-card">
+          <div class="extras-icon">✨</div>
+          <h3>Efeitos Visuais</h3>
+          <p class="extras-desc">Deixe seu carro brilhando</p>
+          <div class="extras-options">
+            <span class="option-tag">Neon RGB</span>
+            <span class="option-tag">Smoke Colorido</span>
+            <span class="option-tag">Chamas</span>
+            <span class="option-tag">Holofote</span>
+          </div>
+          <p class="extras-price">R$ 25.000 - R$ 200.000</p>
+          <button class="btn-extras">Adicionar Efeito</button>
+        </div>
+
+        <div class="extras-card">
+          <div class="extras-icon">🛠️</div>
+          <h3>Modificações de Carro</h3>
+          <p class="extras-desc">Tune e personalize seu veículo</p>
+          <div class="extras-options">
+            <span class="option-tag">Motor turbo</span>
+            <span class="option-tag">Lowrider</span>
+            <span class="option-tag">Pintura metalizada</span>
+            <span class="option-tag">Rodão custom</span>
+          </div>
+          <p class="extras-price">R$ 50.000 - R$ 500.000</p>
+          <button class="btn-extras">Modificar Carro</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="money" class="content-section" style="display:none;">
+      <h1>💰 MONEY</h1>
+      <p class="section-desc">⚠️ Pacotes controlados - não exagera senão vira pay-to-win</p>
+      
+      <div class="money-info-box">
+        <p class="money-warning">💡 Dinheiro é a base da economia do servidor. Use com sabedoria!</p>
+      </div>
+      
+      <div class="money-grid">
+        <div class="money-card">
+          <div class="money-icon">💸</div>
+          <h3>Starter Pack</h3>
+          <p class="money-amount">R$ 50.000 em game</p>
+          <p class="money-includes">Ideal para iniciantes no servidor</p>
+          <ul class="money-benefits">
+            <li>✓ Comprar primeiro carro</li>
+            <li>✓ Abrir primeira loja</li>
+            <li>✓ Equipamentos básicos</li>
+          </ul>
+          <p class="money-real">R$ 9,90</p>
+          <button class="btn-money">Comprar Money</button>
+        </div>
+
+        <div class="money-card">
+          <div class="money-icon">💵</div>
+          <h3>Standard Pack</h3>
+          <p class="money-amount">R$ 200.000 em game</p>
+          <p class="money-includes">Para jogadores em crescimento</p>
+          <ul class="money-benefits">
+            <li>✓ Expandir frota</li>
+            <li>✓ Investir em negócios</li>
+            <li>✓ Customizar carros</li>
+          </ul>
+          <p class="money-real">R$ 29,90</p>
+          <button class="btn-money">Comprar Money</button>
+        </div>
+
+        <div class="money-card">
+          <div class="money-icon">💴</div>
+          <h3>Premium Pack</h3>
+          <p class="money-amount">R$ 500.000 em game</p>
+          <p class="money-includes">Para jogadores experientes</p>
+          <ul class="money-benefits">
+            <li>✓ Comprar casa luxuosa</li>
+            <li>✓ Negócios complexos</li>
+            <li>✓ Investimentos maiores</li>
+          </ul>
+          <p class="money-real">R$ 59,90</p>
+          <button class="btn-money">Comprar Money</button>
+        </div>
+
+        <div class="money-card">
+          <div class="money-icon">💶</div>
+          <h3>Whale Pack</h3>
+          <p class="money-amount">R$ 1.500.000 em game</p>
+          <p class="money-includes">Para os big spenders</p>
+          <ul class="money-benefits">
+            <li>✓ Dominar economia</li>
+            <li>✓ Tudo que quiser</li>
+            <li>✓ Status máximo</li>
+          </ul>
+          <p class="money-real">R$ 129,90</p>
+          <button class="btn-money">Comprar Money</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="faccao" class="content-section" style="display:none;">
+      <h1>⚔️ FACÇÕES</h1>
+      <p class="section-desc">Crie sua facção, levante estrutura, domine o servidor com seu grupo</p>
+      
+      <div class="faction-info-grid">
+        <div class="faction-info-card">
+          <div class="faction-icon">🏗️</div>
+          <h3>Criação de Facção</h3>
+          <p class="faction-desc">Comece seu império</p>
+          <div class="faction-requirements">
+            <p><strong>Requisitos:</strong></p>
+            <ul>
+              <li>💰 R$ 500.000</li>
+              <li>👥 Mínimo 3 membros</li>
+              <li>⭐ Level 20+</li>
+            </ul>
+          </div>
+          <p class="faction-action">Abra uma facção e comande seu grupo</p>
+          <button class="btn-faction">Criar Facção</button>
+        </div>
+
+        <div class="faction-info-card">
+          <div class="faction-icon">⬆️</div>
+          <h3>Sistema de Upgrading</h3>
+          <p class="faction-desc">Fortaleça sua facção</p>
+          <div class="faction-upgrades">
+            <p><strong>Upgrades Disponíveis:</strong></p>
+            <ul>
+              <li>🏰 Base Level 2-5</li>
+              <li>🛡️ Proteção aumentada</li>
+              <li>💰 Lucro +50%</li>
+              <li>👥 Limite de membros</li>
+            </ul>
+          </div>
+          <p class="faction-action">Invista em desenvolvimento</p>
+          <button class="btn-faction">Ver Upgrading</button>
+        </div>
+
+        <div class="faction-info-card">
+          <div class="faction-icon">🎁</div>
+          <h3>Benefícios de Facção</h3>
+          <p class="faction-desc">Vantagens para membros</p>
+          <div class="faction-benefits">
+            <p><strong>Ganhos Exclusivos:</strong></p>
+            <ul>
+              <li>💎 Bônus de lucro semanal</li>
+              <li>🏰 Quartel da facção</li>
+              <li>🚗 Carros facionais</li>
+              <li>👕 Skins da facção</li>
+            </ul>
+          </div>
+          <p class="faction-action">Reúna seus aliados</p>
+          <button class="btn-faction">Gerenciar Facção</button>
+        </div>
+
+        <div class="faction-info-card">
+          <div class="faction-icon">⚡</div>
+          <h3>Territorium Wars</h3>
+          <p class="faction-desc">Domine o mapa</p>
+          <div class="faction-wars">
+            <p><strong>Conquista:</strong></p>
+            <ul>
+              <li>🗺️ Dominar territórios</li>
+              <li>💰 Lucro por territórios</li>
+              <li>📊 Rankings de facções</li>
+              <li>🏆 Prêmios semanais</li>
+            </ul>
+          </div>
+          <p class="faction-action">Vença a guerra pelo controle</p>
+          <button class="btn-faction">Territorium Wars</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="menu-script.js"></script>
+</body>
+</html>

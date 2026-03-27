@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corvette ZR1 | URCA RP</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .carro-detalhe { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+    .carro-hero { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; margin-bottom: 60px; }
+    .carro-imagem { position: relative; overflow: hidden; border-radius: 15px; box-shadow: 0 0 40px rgba(139, 0, 255, 0.2); }
+    .carro-imagem img { width: 100%; height: auto; display: block; border-radius: 15px; }
+    .badge-vip { display: inline-block; background: #d6b87c; color: #000; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: 700; margin-bottom: 20px; }
+    .carro-info h1 { color: #d6b87c; font-size: 48px; margin-bottom: 10px; }
+    .carro-info-data { color: #888; margin-bottom: 30px; }
+    .descricao { color: #bbb; line-height: 1.8; margin: 20px 0; font-size: 15px; }
+    .preco-info { background: linear-gradient(135deg, #d6b87c, #8b6914); border-radius: 10px; padding: 20px; margin: 30px 0; text-align: center; }
+    .preco-info .valor { color: #000; font-size: 32px; font-weight: 700; margin: 10px 0; }
+    .especificacoes { background: rgba(214, 184, 124, 0.1); border: 1px solid rgba(214, 184, 124, 0.3); border-radius: 10px; padding: 25px; margin: 30px 0; }
+    .especificacoes h3 { color: #d6b87c; margin-bottom: 20px; text-transform: uppercase; font-size: 14px; letter-spacing: 1px; }
+    .spec-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .spec-item { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(214, 184, 124, 0.2); }
+    .spec-label { color: #aaa; font-size: 14px; }
+    .spec-valor { color: #fff; font-weight: 600; }
+    .botoes { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 30px; }
+    .btn { padding: 15px 30px; border: none; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 1px; }
+    .btn-comprar { background: linear-gradient(135deg, #d6b87c, #8b6914); color: #000; box-shadow: 0 10px 30px rgba(214, 184, 124, 0.3); font-weight: 700; }
+    .btn-comprar:hover { transform: translateY(-2px); box-shadow: 0 15px 40px rgba(214, 184, 124, 0.4); }
+    .btn-voltar { background: rgba(214, 184, 124, 0.2); color: #fff; border: 1px solid rgba(214, 184, 124, 0.5); }
+    .btn-voltar:hover { background: rgba(214, 184, 124, 0.3); }
+    @media (max-width: 768px) {
+      .carro-hero { grid-template-columns: 1fr; gap: 30px; }
+      .carro-info h1 { font-size: 32px; }
+      .botoes { grid-template-columns: 1fr; }
+      .spec-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header-urca">
+    <div class="header-content">
+      <h1>🎮 URCA RP</h1>
+      <div class="header-actions">
+        <button class="hamburger-btn" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="headerMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="header-menu" id="headerMenu">
+          <div class="header-menu-title">NAVEGAÇÃO</div>
+          <a href="index.html">🏠 Início</a>
+          <a href="loja.html" class="active">🚗 Loja</a>
+          <a href="vip.html">💎 VIP</a>
+          <a href="conta.html">👤 Conta</a>
+          <hr>
+          <a href="https://discord.gg" target="_blank">💬 Discord</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="carro-detalhe">
+    <div class="carro-hero">
+      <div class="carro-imagem">
+        <img src="/imagens/Corvette ZR1.jpg" alt="Corvette ZR1" onerror="this.src='https://via.placeholder.com/400x300/1a1a1a/d6b87c?text=Corvette+ZR1'">
+      </div>
+      <div class="carro-info">
+        <div class="badge-vip">💎 PACOTE VIP</div>
+        <h1>Corvette ZR1</h1>
+        <p class="carro-info-data">O rei americano da velocidade</p>
+        <p class="descricao">
+          O Chevrolet Corvette ZR1 é o supercarro americano definitivo. Com motor LT5 V8 supercharged de 755 HP e aerodinâmica avançada, este monstro alcança 341 km/h. Uma máquina de performance pura que representa o auge da engenharia americana.
+        </p>
+        <div class="preco-info">
+          <div>Preço VIP</div>
+          <div class="valor">R$ 50</div>
+          <div style="font-size: 12px; color: rgba(0,0,0,0.7);">In-game currency (Membros VIP)</div>
+        </div>
+        <div class="especificacoes">
+          <h3>📊 Especificações</h3>
+          <div class="spec-grid">
+            <div class="spec-item"><span class="spec-label">Velocidade Máxima</span><span class="spec-valor">341 km/h</span></div>
+            <div class="spec-item"><span class="spec-label">Aceleração</span><span class="spec-valor">2.85 seg</span></div>
+            <div class="spec-item"><span class="spec-label">Torque</span><span class="spec-valor">969 Nm</span></div>
+            <div class="spec-item"><span class="spec-label">Potência</span><span class="spec-valor">755 HP</span></div>
+            <div class="spec-item"><span class="spec-label">Tipo</span><span class="spec-valor">Supercarro</span></div>
+            <div class="spec-item"><span class="spec-label">Acesso</span><span class="spec-valor">VIP</span></div>
+          </div>
+        </div>
+        <div class="botoes">
+          <a href="https://discord.gg/ZgWVdm4H" target="_blank" class="btn btn-comprar">🛒 COMPRAR AGORA</a>
+          <button class="btn btn-voltar" onclick="window.location.href='loja.html'">← VOLTAR LOJA</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+  <script src="menu-script.js"></script>
+</body>
+</html>
