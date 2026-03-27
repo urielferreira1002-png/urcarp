@@ -6,6 +6,84 @@
   <title>VIPs | URCA RP</title>
 
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: #000 !important;
+    }
+
+    .ranks-container {
+      gap: 22px;
+    }
+
+    .rank-card {
+      background: #0a0a0a !important;
+      border: 1px solid #242424 !important;
+      border-radius: 14px !important;
+      box-shadow: none !important;
+      animation: slideInUp 0.6s ease-out !important;
+      transform: none !important;
+    }
+
+    .rank-card:hover {
+      transform: translateY(-4px) !important;
+      border-color: #3a3a3a !important;
+      box-shadow: none !important;
+      animation: none !important;
+    }
+
+    .rank-card:hover .rank-icon,
+    .rank-card:hover .rank-preco,
+    .rank-card:hover .rank-lema {
+      transform: none !important;
+      animation: none !important;
+      text-shadow: none !important;
+      color: inherit !important;
+      background: inherit !important;
+    }
+
+    .btn-comprar-rank {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      min-height: 50px;
+      padding: 14px 18px !important;
+      border: 1px solid #d6b87c !important;
+      border-radius: 8px !important;
+      background: #d6b87c !important;
+      color: #000 !important;
+      font-weight: 800;
+      font-size: 0.98rem;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      text-transform: uppercase;
+      box-shadow: none !important;
+      filter: none !important;
+      transition: background-color 0.22s ease, color 0.22s ease, transform 0.22s ease;
+    }
+
+    .btn-comprar-rank::before,
+    .btn-comprar-rank::after {
+      content: none !important;
+      display: none !important;
+    }
+
+    .btn-comprar-rank:hover {
+      background: #c7a763 !important;
+      color: #000 !important;
+      transform: translateY(-1px);
+      box-shadow: none !important;
+    }
+
+    .btn-comprar-rank:active {
+      transform: translateY(0);
+    }
+
+    .btn-comprar-rank:focus-visible {
+      outline: 2px solid #d6b87c;
+      outline-offset: 2px;
+    }
+  </style>
 </head>
 
 <body>
@@ -24,7 +102,7 @@
           <div class="header-menu-title">NAVEGAÇÃO</div>
           <a href="index.html">🏠 Início</a>
           <a href="loja.html">🚗 Loja</a>
-          <a href="vip.html">💎 VIP</a>
+          <a href="vip.html" class="active">💎 VIP</a>
           <a href="conta.html">👤 Conta</a>
           <hr>
           <a href="https://discord.gg" target="_blank">💬 Discord</a>
